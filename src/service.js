@@ -1,5 +1,5 @@
 export async function fetchCandlestickData() {
-    const response = {
+    /* const response = {
       "Meta Data": {
           "1. Information": "Daily Prices (open, high, low, close) and Volumes",
           "2. Symbol": "AAPL",
@@ -43535,12 +43535,12 @@ export async function fetchCandlestickData() {
               "5. volume": "2487300"
           }
       }
-  }
-    // const response = await fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&outputsize=full&apikey=123');
-    // if (!response.ok) {
-    //   throw new Error('Network response was not ok');
-    // }
-    // const data = await response.json();
-    const data = response;
+    }
+    const data = response; */
+    const response = await fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&outputsize=full&apikey=123');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
     return data;
   }

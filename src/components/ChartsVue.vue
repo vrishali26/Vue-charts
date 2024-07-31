@@ -14,7 +14,7 @@ import Chart from 'chart.js/auto';
 import { fetchCandlestickData } from '../service';
 
 export default {
-  name: 'HelloWorld',
+  name: 'ChartsVue',
   data: () => ({
     index : 0,    
     open : [],
@@ -45,7 +45,6 @@ export default {
       }
     },
     updateChart() {
-      // alert('test.....');
       const newCanvas = document.createElement("canvas");
       newCanvas.setAttribute("id", "myChart");
       const wrapper = document.getElementById("wrapper");
@@ -136,7 +135,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
